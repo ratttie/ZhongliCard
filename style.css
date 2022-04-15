@@ -1,0 +1,52 @@
+.container {
+    margin-top: 0px;
+    transform-style: preserve-3d;
+}
+.front {
+    background-color: #FFF5F2;
+    width: 320px;
+    height: 606px;
+}
+.back {
+    width: 320px;
+    height: 606px; 
+    background-color: #FFF5F2;
+}
+.front, .back {
+    cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    transition: transform .9s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+}
+.logo {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 202px;
+    height: 74px;
+}
+.text {
+    margin: 56px auto;
+    width: 250px;
+    height: 300px;
+    font-family: 'Bruno Ace SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #B17E59;
+}
+.container:hover .front {
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+.container:hover .back {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+.container .back{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
